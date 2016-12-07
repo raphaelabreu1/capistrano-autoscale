@@ -2,10 +2,10 @@ require 'aws-sdk'
 require 'efsas/aws/credentials'
 
 module Capistrano
-  module Autoscaling
+  module Autoscale
     module Aws
-      module AutoScaling
-        include Capistrano::Autoscaling::Aws::Credentials
+      module EC2
+        include Capistrano::Autoscale::Aws::Credentials
 
         def ec2_client
           @ec2_client ||= ::Aws::EC2::Client.new(credentials)

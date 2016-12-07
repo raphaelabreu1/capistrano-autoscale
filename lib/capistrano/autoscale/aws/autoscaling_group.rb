@@ -2,10 +2,10 @@ require 'aws-sdk'
 require 'capistrano/autoscale/aws/credentials'
 
 module Capistrano
-  module Autoscaling
+  module Autoscale
     module Aws
-      module AutoScaling
-        include Capistrano::Autoscaling::Aws::Credentials
+      module AutoscalingGroup
+        include Capistrano::Autoscale::Aws::Credentials
         include Capistrano::DSL
 
         def autoscaling

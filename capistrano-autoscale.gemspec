@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["support@clinch.io"]
 
   spec.summary       = %q{Capistrano plugin for deploying to AWS AutoScale groups.}
-  spec.description   = %q{Capistrano plugin for deploying to AWS AutoScale groups.}
+  spec.description   = %q{Deploys to all instances in a AWS AutoScale group.}
   spec.homepage      = "https://github.com/ClinchIO/capistrano-autoscale"
   spec.license       = "MIT"
 
