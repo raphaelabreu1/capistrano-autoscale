@@ -11,7 +11,8 @@ end
 
 def autoscale(groupname, *args)
   include Capistrano::DSL
-  include Capistrano::Autoscaling::Aws::AutoScaling
+  include Capistrano::Autoscale::Aws::AutoScalingGroup
+  include Capistrano::Autoscale::Aws::EC2
 
   set :aws_autoscale_group, groupname
 
