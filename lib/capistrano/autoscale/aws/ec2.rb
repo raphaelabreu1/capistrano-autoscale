@@ -1,5 +1,5 @@
 require 'aws-sdk'
-require 'efsas/aws/credentials'
+require 'capistrano/autoscale/aws/credentials'
 
 module Capistrano
   module Autoscale
