@@ -8,5 +8,4 @@
 /spec/reports/
 /tmp/
 .idea/
-lib/.DS_Store
-lib/capistrano/.DS_Store
+.DS_Store
