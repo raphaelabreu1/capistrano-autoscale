@@ -1,6 +1,6 @@
 /.bundle/
 /.yardoc
-Gemfile.lock
+/Gemfile.lock
 /_yardoc/
 /coverage/
 /doc/
@@ -9,3 +9,4 @@ Gemfile.lock
 /tmp/
 .idea/
 .DS_Store
+*.gem
