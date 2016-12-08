@@ -18,13 +18,17 @@ def autoscale(groupname, *args)
 
   set :aws_autoscale_group, groupname
 
-  instances = autoscale_group&.instances&.select do |instance|
-    instance.lifecycle_state == 'InService'
-  end
+  if autoscale_group
+    instances = autoscale_group.instances.select do |instance|
+      instance.lifecycle_state == 'InService'
+    end
 
-  instances&.each do |instance|
-    hostname = ec2_instance(instance.instance_id).private_ip_address
-    p "Autoscale Deploying to: #{hostname}"
-    server(hostname, *args)
+    instances.each do |instance|
+      hostname = ec2_instance(instance.instance_id).private_ip_address
+      p "Autoscale Deploying to: #{hostname}"
+      server(hostname, *args)
+    end
+  else
+    # Log something or fail hard?
   end
 end
