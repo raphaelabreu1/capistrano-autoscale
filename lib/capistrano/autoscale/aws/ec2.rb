@@ -12,7 +12,7 @@ module Capistrano
         end
 
         def ec2_instance(instance_id)
-          @ec2_instance ||= ::Aws::EC2::Instance.new(instance_id, client: ec2_client)
+          ::Aws::EC2::Instance.new(instance_id, client: ec2_client)
         end
 
       end

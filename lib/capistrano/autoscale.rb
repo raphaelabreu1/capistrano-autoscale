@@ -29,6 +29,6 @@ def autoscale(groupname, *args)
       server(hostname, *args)
     end
   else
-    # Log something or fail hard?
+    p "Error: No #{groupname} autoscale group found."
   end
 end
