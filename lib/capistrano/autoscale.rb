@@ -1,4 +1,5 @@
 require 'aws-sdk'
+
 require 'capistrano/all'
 require 'capistrano/dsl'
 
@@ -25,7 +26,7 @@ def autoscale(groupname, *args)
 
     instances.each do |instance|
       hostname = ec2_instance(instance.instance_id).private_ip_address
-      p "Autoscale Deploying to: #{hostname}"
+      p "Autoscale deploying to: #{hostname}"
       server(hostname, *args)
     end
   else
