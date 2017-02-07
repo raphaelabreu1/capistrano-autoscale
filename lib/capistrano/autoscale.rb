@@ -24,7 +24,7 @@ def autoscale(groupname, *args)
     end
 
     instances.each do |instance|
-      hostname = ec2_instance(instance.instance_id).private_ip_address
+      hostname = ec2_instance(instance.instance_id).public_ip_address
       p "Autoscale Deploying to: #{hostname}"
       server(hostname, *args)
     end
